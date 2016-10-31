@@ -8,9 +8,9 @@ import java.util.stream.Stream;
  */
 public class Application {
 
+    private static MessageSupplier supplier = new MessageSupplier();
+
     public static void main(String[] args) {
-        //sample
-        String string = Stream.of("I", "do", "want", "to", "be", "a", "git", "guru!").collect(Collectors.joining(" "));
-        System.out.println(string);
+        System.out.println(supplier.supply());
     }
 }
